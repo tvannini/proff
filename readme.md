@@ -3,14 +3,14 @@
                        #=======================#
 
 >                                         Document edited by ~PRoff 2.0~
->                             Text: <http://proff.sourceforge.net/soft/>
->                             HTML: <http://proff.sourceforge.net/full/>
+>                     Text: <http://tvannini.github.io/proff/site/soft/>
+>                     HTML: <http://tvannini.github.io/proff/site/full/>
 
  * Current version: 2.0
- * PRoff site: <http://proff.sourceforge.net>
- * Download: <http://proff.sourceforge.net/download/>
- * Documentation: <http://proff.sourceforge.net/doc/>
- * Informations: <algoraro@users.sourceforge.net>
+ * PRoff site: <http://tvannini.github.io/proff>
+ * Download: <http://tvannini.github.io/proff>
+ * Documentation: <http://tvannini.github.io/proff>
+ * Informations: <tvannini@gmail.com>
 
 
    ~ Content ~
