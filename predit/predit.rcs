@@ -1,4 +1,0 @@
-# ___________________________________________  Source viewer control ___
-style "PREdit" {
-   }
-widget_class "*" style "PREdit"

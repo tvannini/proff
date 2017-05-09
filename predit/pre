@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if [ $1 ]; then
- echo "Opening $1 with PREdit text editor..."
-else
- echo "Starting PREdit text editor..." 
-fi
-exec php /proff/predit/predit.php "$1"
