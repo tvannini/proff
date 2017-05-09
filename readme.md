@@ -6,11 +6,11 @@
 >                             Text: <http://proff.sourceforge.net/soft/>
 >                             HTML: <http://proff.sourceforge.net/full/>
 
- » Current version: 2.0
- » PRoff site: <http://proff.sourceforge.net>
- » Download: <http://proff.sourceforge.net/download/>
- » Documentation: <http://proff.sourceforge.net/doc/>
- » Informations: <algoraro@users.sourceforge.net>
+ * Current version: 2.0
+ * PRoff site: <http://proff.sourceforge.net>
+ * Download: <http://proff.sourceforge.net/download/>
+ * Documentation: <http://proff.sourceforge.net/doc/>
+ * Informations: <algoraro@users.sourceforge.net>
 
 
    ~ Content ~
@@ -19,11 +19,11 @@
    1 ...... Licensing
    2 ...... Project description
    3 ...... Script description
-    3.1 ... Pre-processor
-    3.2 ... Post-processor
+     3.1 .. Pre-processor
+     3.2 .. Post-processor
    4 ...... How to run PRoff
-    4.1 ... From command line
-    4.2 ... From text editor
+     4.1 .. From command line
+     4.2 .. From text editor
    5 ...... Document formatting syntax
    6 ...... Todo
 
