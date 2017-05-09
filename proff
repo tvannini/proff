@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ $1 ]; then
+ echo "Proffing $1..."
+ exec php /proff/proff.php "$1"
+else
+ echo "Please provide a file to proff"
+fi

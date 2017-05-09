@@ -1,0 +1,45 @@
+{
+
+// Sublime PRoff configuration file
+// ================================
+
+//  - PHP executable -
+//  The path to PHP executable
+//"php" : "php",
+
+//  - PRoff script -
+//  Path to the PRoff script file
+"proff" : "/work/proff/proff.php",
+
+//  - Page width -
+// This is the number of columns (characters) text will be formatted to.
+// For full HTML productions this misure will be opportunely reported in
+// "em" units.
+// Command line equivalent parameter is "-w <n>".
+// Default is 72
+"width" : 72,
+
+//  - Left align -
+// If set to ON text will be wrapped, but not justified.
+// This is expecially useful using proporsional fonts.
+// Command line equivalent parameter is "-l".
+// Default is OFF
+"left" : true,
+
+//  - Temp file -
+// Path to the temp file created for proffing content
+//"tmp" : "/tmp/proff_tmp",
+
+//  - Include extensions -
+// List of file extensions to be processed: if this list is not empty
+// only files with extensions in this list will be processed
+"include" : ["", "txt", "text", "note"],
+
+//  - Exclude extensions -
+// List of file extensions to be never processed: files with extensions in
+// this list will never be processed
+"exclude" : [],
+
+// Object properties closure
+"" : ""
+}

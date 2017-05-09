@@ -1,0 +1,67 @@
+import sublime, sublime_plugin
+import subprocess
+import codecs
+import os
+
+
+class ProffIdleWatcher(sublime_plugin.EventListener):
+
+    pending = 0
+
+    def on_timeout(self, view):
+
+        self.pending = self.pending - 1
+        if self.pending == 0:
+            # There are no more queued up calls to on_timeout, so it must have
+            # been 1000ms since the last modification
+            self.on_idle(view)
+
+
+    def on_modified(self, view):
+
+        if view.file_name() == "/work/lorem":
+            if view.get_status("proff") != "Proffing...":
+                self.pending = self.pending + 1
+                # Ask for on_timeout to be called in 1000ms
+                sublime.set_timeout(lambda: self.on_timeout(view), 1000)
+
+
+    def on_idle(self, view):
+
+        # ________________________________________________________ Save caret position ___
+        caret = view.sel()[0].begin()
+        # ___________________________________________________ Make a whole text region ___
+        r = sublime.Region(0, view.size())
+        # ___________________________________________________ Get text from whole view ___
+        t = view.substr(r)
+        # _______________________________________ Create a temp file with view content ___
+        tmp_name = "/tmp/proff_tmp"
+        tmp_file = codecs.open(tmp_name, "w", "utf-8")
+        tmp_file.write(t)
+        tmp_file.close()
+        # _________________________________________________________ Command parameters ___
+        cmd = ["php","/work/proff/proff.php", tmp_name, "-w", "72", "-l", "-p", "0", "-r"]
+        # ______________________________________ Externally execute Proff on temp file ___
+        p = subprocess.Popen(cmd,
+                             cwd    = os.getcwd(),
+                             stdout = subprocess.PIPE,
+                             stderr = subprocess.PIPE)
+        # ______________________________________________________________ If got errors ___
+        if (p.stderr):
+            print p.stderr
+        # _____________________________________________________________ If got outpout ___
+        if p.stdout:
+            view.set_status("proff", "Proffing...")
+            edit          = view.begin_edit("proff")
+            # ___________________________________________________ Replace text in view ___
+            view.replace(edit, r, p.stdout.read().decode("UTF-8", "replace"))
+            view.end_edit(edit)
+            view.set_status("proff", '%s character proffed' % view.size())
+        # _______________________________________________________ Reset caret position ___
+        view.sel().clear()
+        r = sublime.Region(caret, caret)
+        view.sel().add(r)
+        view.show_at_center(r)
+        # ___________________________________________________________ Unlink temp file ___
+        os.unlink(tmp_name)
+        self.pending = 0
