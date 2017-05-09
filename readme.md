@@ -13,7 +13,7 @@
  * Informations: tvannini@gmail.com
 
 
-   ** Content **
+   **Content**
 
 0. Preamble
 1. Licensing
@@ -28,7 +28,7 @@
 6. Todo
 
 
- 0 ** Preamble **
+ 0 **Preamble**
 
    This project was born from the problem of writing clear,  consistent,
    good-looking, web-able documentation. I think it's impossible to  use
@@ -51,7 +51,7 @@
    please mail to tvannini@gmail.com.
 
 
- 1 ** Licensing **
+ 1 **Licensing**
 
    PRoff - Copyright (C) 2007, Tommaso Vannini (<tvannini@gmail.com>)
 
@@ -67,13 +67,13 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
- 2 ** Project description **
+ 2 **Project description**
 
    The idea of this project is not new: on the contrary it is very  old!
    The goal is to realize a  program  to  parse  text  to  beautify  it,
    without need of tags or  other  text-extraneous  elements.  One  only
-   rule: ** using a processed document as a source, process must  result
-   in the same document **.
+   rule: **using a processed document as a source, process  must  result
+   in the same document**.
 
    This document, for example, as you see it,  is  the  source  and  the
    result at the same time.
@@ -179,14 +179,14 @@
    source one.
 
 
- 3 ~ Script description ~
+ 3 **Script description**
 
    The  script  works  in  two  steps:  file  text  is   passed   to   a
    "pre-processor" that transforms it into an array; then the  array  is
    passed to a "post-processor" that composes final text from it.
 
 
-   3.1 ~ Pre-processor ~
+   3.1 **Pre-processor**
 
        First  script,  pre-processor,  splits  text  into  an  array  of
        paragraphs and returns each paragraph indentation and first  line
@@ -194,7 +194,7 @@
        and graphical elements.
 
 
-   3.2 ~ Post-processor ~
+   3.2 **Post-processor**
 
        Post-processor  script  formats  each  paragraph  according  with
        indentation, first line  indentation  and  global  width  and  it
@@ -216,7 +216,7 @@
        intensity characters ("~") will be stripped out from black text.
 
 
- 4 ~ How to run PRoff ~
+ 4 **How to run PRoff**
 
    PRoff is a batch program: it runs without any  user  interaction.  It
    can produce files or send text on STDOUT, recoverable by pipes.
@@ -230,7 +230,7 @@
    INI directives.
 
 
-   4.1 ~ From command line ~
+   4.1 **From command line**
 
        You can run PRoff both as PHP script and as WIN32 executable.  In
        order  to  run  it  as  PHP  script,  you  need  a  PHP   working
@@ -285,7 +285,7 @@
        can be used to start creating new configuration files.
 
 
-   4.2 ~ From text editor ~
+   4.2 **From text editor**
 
        PRoff can be easily integrated in most text editors, just setting
        an external program execution and passing  ambient  variables  to
@@ -325,7 +325,7 @@
        soft HTML format) and CTRL+ALT+X (for full HTML format).
 
 
- 5 ~ Document formatting syntax ~
+ 5 **Document formatting syntax**
 
    Document text can be written considering a few tricks that will  help
    PRoff to respect and rightly understand your document style.
@@ -353,7 +353,7 @@
       bordered in full HTML rendering.
 
 
- 6 ~ Todo ~
+ 6 **Todo**
 
     - Document structure recognition and indexes linking.
     - PDF production.
