@@ -15,17 +15,17 @@
 
    ~ Content ~
 
-   0...... Preamble
-   1...... Licensing
-   2...... Project description
-   3...... Script description
-     3.1.. Pre-processor
-     3.2.. Post-processor
-   4...... How to run PRoff
-     4.1.. From command line
-     4.2.. From text editor
-   5...... Document formatting syntax
-   6...... Todo
+   0. ..... Preamble
+   1. ..... Licensing
+   2. ..... Project description
+   3. ..... Script description
+     3.1. . Pre-processor
+     3.2. . Post-processor
+   4. ..... How to run PRoff
+     4.1. . From command line
+     4.2. . From text editor
+   5. ..... Document formatting syntax
+   6. ..... Todo
 
 
  0 ~ Preamble ~
