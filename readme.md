@@ -3,32 +3,32 @@
                        #=======================#
 
 >                                         Document edited by ~PRoff 2.0~
->                     Text: <http://tvannini.github.io/proff/site/soft/>
->                     HTML: <http://tvannini.github.io/proff/site/full/>
+>                        Text: http://tvannini.github.io/proff/site/soft
+>                        HTML: http://tvannini.github.io/proff/site/full
 
  * Current version: 2.0
- * PRoff site: <http://tvannini.github.io/proff>
- * Download: <http://tvannini.github.io/proff>
- * Documentation: <http://tvannini.github.io/proff>
- * Informations: <tvannini@gmail.com>
+ * PRoff site: http://tvannini.github.io/proff
+ * Download: http://tvannini.github.io/proff
+ * Documentation: http://tvannini.github.io/proff
+ * Informations: tvannini@gmail.com
 
 
-   ~ Content ~
+   ** Content **
 
-   0. Preamble
-   1. Licensing
-   2. Project description
-   3. Script description
-     3.1. Pre-processor
-     3.2. Post-processor
-   4. How to run PRoff
-     4.1. From command line
-     4.2. From text editor
-   5. Document formatting syntax
-   6. Todo
+0. Preamble
+1. Licensing
+2. Project description
+3. Script description
+    1. Pre-processor
+    2. Post-processor
+4. How to run PRoff
+    1. From command line
+    2. From text editor
+5. Document formatting syntax
+6. Todo
 
 
- 0 ~ Preamble ~
+ 0 ** Preamble **
 
    This project was born from the problem of writing clear,  consistent,
    good-looking, web-able documentation. I think it's impossible to  use
@@ -48,10 +48,10 @@
 
    PRoff, Personal Roff, is the result of my effort and I  hope  someone
    will find it useful. If you  have  ideas,  suggestions  or  questions
-   please mail to <algoraro@users.sourceforge.net>.
+   please mail to tvannini@gmail.com.
 
 
- 1 ~ Licensing ~
+ 1 ** Licensing **
 
    PRoff - Copyright (C) 2007, Tommaso Vannini (<tvannini@gmail.com>)
 
@@ -67,13 +67,13 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
- 2 ~ Project description ~
+ 2 ** Project description **
 
    The idea of this project is not new: on the contrary it is very  old!
    The goal is to realize a  program  to  parse  text  to  beautify  it,
    without need of tags or  other  text-extraneous  elements.  One  only
-   rule: ~ using a processed document as a source, process  must  result
-   in the same document ~.
+   rule: ** using a processed document as a source, process must  result
+   in the same document **.
 
    This document, for example, as you see it,  is  the  source  and  the
    result at the same time.
