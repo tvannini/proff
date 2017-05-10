@@ -8,19 +8,19 @@
 >                        HTML: http://tvannini.github.io/proff/site/full
 
 
- » Current version: 2.0
- » PRoff site: http://tvannini.github.io/proff
- » Download: http://tvannini.github.io/proff
- » Documentation: http://tvannini.github.io/proff
- » Informations: tvannini@gmail.com
+  » Current version: 2.0
+  » PRoff site: http://tvannini.github.io/proff
+  » Download: http://tvannini.github.io/proff
+  » Documentation: http://tvannini.github.io/proff
+  » Informations: tvannini@gmail.com
 
 
-   ~ Content ~
+    ~ Content ~
 
-   0. ...... Preamble
-   1. ...... Licensing
-   2. ...... How PRoff works
-   3. ...... Formatting syntax
+    0. ...... Preamble
+    1. ...... Licensing
+    2. ...... How PRoff works
+    3. ...... Formatting syntax
 
 
  0. ~ Preamble ~
