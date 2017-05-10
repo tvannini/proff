@@ -1,0 +1,37 @@
+ 3. ~ Script description ~
+
+    The script works in two steps: file text is passed to a
+    "pre-processor" that transforms it into an array; then the array is
+    passed to a "post-processor" that composes final text from it.
+
+
+    3.1. ~ Pre-processor ~
+
+         First script, pre-processor, splits text into an array of
+         paragraphs and returns each paragraph indentation and first
+         line indentation. The script respects blank lines, un/ordered
+         lists and graphical elements.
+
+
+    3.2. ~ Post-processor ~
+
+         Post-processor script formats each paragraph according with
+         indentation, first line indentation and global width and it
+         composes final text.
+
+          If marking up is requested post-processor runs some extra
+          regular expression to:
+           - make href links from URLs
+           - make mailto links from email addresses
+           - mark as bold double-intensity text (~text~)
+
+          HTML rendering is offered in two flavours: "soft" or "full".
+          If soft one is requested text is returned in <pre> tags for
+          preserving mono-spaced format in HTML.
+
+          Full one, instead, returns document divided into paragraphs
+          (<p>) with indentation and first line indentation style
+          properties. Graphic surrounded text will be rendered as framed
+          and double
+         intensity characters ("~") will be stripped out from black
+         text.

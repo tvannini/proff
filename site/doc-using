@@ -1,0 +1,134 @@
+ 4. ~ How to use PRoff ~
+
+    PRoff is a batch program: it runs without any user interaction. It
+    can produce files or send text on STDOUT, recoverable by pipes.
+
+    Tipically it can be run from command line or from within another
+    program like a text editor.
+
+    When PRoff starts it will look for configuration file. Default
+    configuration file is proff.ini, in the same directory as PRoff
+    executable or script. Command line passed parameters will override
+    INI directives.
+
+
+    4.1. ~ From command line ~
+
+         You can run PRoff both as PHP script and as WIN executable. In
+         order to run it as PHP script, you need a PHP working
+         installation.
+
+         WIN executable - Command line:
+          proff.exe <source> [<option> [<value>] ...]
+
+         PHP script - Command line:
+          php.exe proff.php <source> [<option> [<value>] ...]
+
+         Where:
+
+            <source>
+
+               Source text file to format.
+
+            <option> <value>
+
+               One or more of the following options and values:
+
+               -h Displays help informations (no <value> is needed).
+
+               -i Configuration file. Set <value> to INI file to use.
+
+               -r Result file. If a valid file name is passed as
+                  <value>, result text will be written to file, else
+                  result text will be output to STDOUT. If no full path
+                  is provided for <result_file>, processed file position
+                  will be determinated starting from source file
+                  directory.
+
+               -w Page width. Set <value> to number of characters
+                  (columns) to justify text to (default is 72).
+
+               -p Markup (production type). Passed <value> can be one of
+                  following values:
+
+                   [0|FALSE]...... Text is formatted without markup
+                   [1|TRUE|SOFT].. Text is formatted with soft markup
+                   [FULL]......... Text is formatted with full markup
+                                   (default value is FALSE).
+
+               -o Open result file (no <value> is needed).
+
+               -m Send as mail (no <value> is needed).
+
+         Options -r, -w, -p, -o, -m and many more ones can be set by
+         configuration file directives. See proff.ini file for a
+         complete configuration directives description.
+
+         The easiest way to use PRoff is to prepare one or more
+         configuration files containing all needed parameters. With
+         PRoff package are provided three configuration files (text.ini,
+         soft.ini, full.ini) that can be used to make, respectively,
+         text, soft HTML and full HTML processing.
+
+         To use one of the provided configuration files just run
+          path/to/proff.exe -i full.ini
+         from command line.
+
+         Configuration file proff.ini is the default one, used when no
+         other file is passed: it contains all detailed directives and
+         it can be used to start creating new configuration files.
+
+
+    4.2. ~ From text editor ~
+
+         PRoff can be easily integrated in most text editors, just
+         setting an external program execution and passing ambient
+         variables to PRoff executable.
+
+         For example, for integrating PRoff in Notepad++ text editor
+         (<http://notepad-plus.sourceforge.net/uk/site.htm>) just add
+         following lines to file notepad++/shortcuts.xml configuration
+         file:
+
+>           <UserDefinedCommands>
+>              <Command name="Format as text"
+>                       Ctrl="yes"
+>                       Alt="yes"
+>                       Shift="no"
+>                       Key="84">
+>               path/to/proff.exe "$(FULL_CURRENT_PATH)" -i text.ini -o
+>              </Command>
+>              <Command name="Format as HTML"
+>                       Ctrl="yes"
+>                       Alt="yes"
+>                       Shift="no"
+>                       Key="72">
+>               path/to/proff.exe "$(FULL_CURRENT_PATH)" -i soft.ini -o
+>              </Command>
+>              <Command name="Format as full HTML"
+>                       Ctrl="yes"
+>                       Alt="yes"
+>                       Shift="no"
+>                       Key="88">
+>               path/to/proff.exe "$(FULL_CURRENT_PATH)" -i full.ini -o
+>              </Command>
+>           </UserDefinedCommands>
+
+         Now it will be possible, from within Notepad++, calling PRoff
+         directly, pressing CTRL+ALT+T (for text format), CTRL+ALT+H
+         (for soft HTML format) and CTRL+ALT+X (for full HTML format).
+
+
+         ~ SublimeText plugin ~
+
+         PRoff is also a plugin for SublimeText editor, both versions 2
+         and 3.
+
+         See PRoff-SublimeText-plugin section for more informations.
+
+
+         ~ External Edit ~
+
+         Once you have PRoff running on you preferred text editor you
+         can intergate it with all system text-areas by "external-edit"
+         script.

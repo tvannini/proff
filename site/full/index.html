@@ -1,0 +1,124 @@
+<html><head><META http-equiv='Content-Type' content='text/html; charset=UTF-8'><style type='text/css'>
+ .proffed {max-width:36em;text-align:left;}
+ .proffed p {font:0.8em/1.5em Tahoma,sans-serif;text-align:justify;letter-spacing:1px;color:#555555;}
+ .proffed fieldset {padding: 0.5em 0.5em 0.5em 0.5em;border:1px solid #555555;font:0.8em/1.5em Tahoma,sans-serif;text-align:justify;letter-spacing:1px;color:#555555;}
+ .proffed a {color:#993300;text-decoration:none;}
+ .proffed a:hover {color:#fefefe;background-color:#993300;text-decoration:none;}</style></head>
+<body>
+<center><div class='proffed'>
+<fieldset style='white-space:nowrap;margin-left:11.5em;width:1%;'>
+PRoff - Personal Roff 
+</fieldset>
+
+<br />
+<pre>
+                                          Document edited by <b>PRoff 2.0</b>
+                         Text: <a href="http://tvannini.github.io/proff/site/soft">http://tvannini.github.io/proff/site/soft</a>
+                         HTML: <a href="http://tvannini.github.io/proff/site/full">http://tvannini.github.io/proff/site/full</a>
+</pre>
+
+<br />
+<p style='margin-left:0.5em;'>» Current version: 2.0</p>
+<p style='margin-left:0.5em;'>» PRoff site:
+<a href="http://tvannini.github.io/proff">http://tvannini.github.io/proff</a></p>
+<p style='margin-left:0.5em;'>» Download:
+<a href="http://tvannini.github.io/proff">http://tvannini.github.io/proff</a></p>
+<p style='margin-left:0.5em;'>» Documentation:
+<a href="http://tvannini.github.io/proff">http://tvannini.github.io/proff</a></p>
+<p style='margin-left:0.5em;'>» Informations: <a href="mailto:tvannini@gmail.com">tvannini@gmail.com</a></p>
+
+<br />
+<p style='margin-left:1.5em;'><b> Content </b></p>
+
+<p style='margin-left:1.5em;'>0. ...... Preamble</p>
+<p style='margin-left:1.5em;'>1. ...... Licensing</p>
+<p style='margin-left:1.5em;'>2. ...... How PRoff works</p>
+<p style='margin-left:1.5em;'>3. ...... Formatting syntax</p>
+
+<br />
+<p style='margin-left:0.5em;'>0. <b> Preamble </b></p>
+
+<p style='margin-left:2em;'>This project was born from the problem of
+writing clear, consistent, good-looking, web-able documentation.</p>
+
+<p style='margin-left:2em;'>After working for a while with LATEX, *roff,
+WYSIWYG editors, HTML and WIKICode, I came up with a brand new solution:
+I just wanted to definitively wipe tags out.</p>
+
+<p style='margin-left:2em;'>PRoff, my Personal Roff, is the result of my
+effort and I hope someone will find it useful. If you have ideas,
+suggestions or questions please mail to <a href="mailto:tvannini@gmail.com">tvannini@gmail.com</a>.</p>
+
+<br />
+<p style='margin-left:0.5em;'>1. <b> Licensing </b></p>
+
+<p style='margin-left:2em;'>PRoff - Copyright (C) 2007, Tommaso Vannini
+(&lt;<a href="mailto:tvannini@gmail.com">tvannini@gmail.com</a>&gt;)</p>
+
+<p style='margin-left:2em;'>PRoff is free software; you can redistribute
+it and/or modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 3 of the
+License, or (at your option) any later version. PRoff is distributed in
+the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+PURPOSE. See the GNU General Public License for more details.</p>
+
+<p style='margin-left:2em;'>You should have received a copy of the GNU
+General Public License along with this program. If not, see
+&lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</p>
+
+<br />
+<p style='margin-left:0.5em;'>2. <b> How PRoff works </b></p>
+
+<p style='margin-left:2em;'>The idea is to identify a set of criteria to
+beautify a text, with no need of tags or other text-extraneous
+elements.</p>
+
+<p style='margin-left:2em;'>One only rule: <b> feeding a processed
+document as a source, process must result in the same document </b>.</p>
+
+<p style='margin-left:2em;'>This document, for example, as you see it,
+is the source and the result at the same time.</p>
+
+<br />
+<p style='margin-left:0.5em;'>3. <b> Formatting syntax </b></p>
+
+<p style='margin-left:2em;'>Document text can be written considering a
+few tricks that will help PRoff to respect and rightly understand your
+document style.</p>
+
+<p style='margin-left:2em;'>Here for &quot;graphic&quot; element is
+intended a character (or block of characters) matching regular
+expression &quot;\W+&quot;.</p>
+
+<p style='margin-left:2.5em;'>- All in-paragraph multiple spaces will be
+reduced to one.</p>
+<p style='margin-left:2.5em;'>- Line breaks will not break
+paragraphs.</p>
+<p style='margin-left:2.5em;'>- All paragraphs larger than line width
+will be justified.</p>
+<p style='margin-left:2.5em;'>- Blank lines will be respected and they
+break paragraphs.</p>
+<p style='margin-left:3.5em;text-indent:-1em;'>- Start each unordered
+list element with a &quot;graphic&quot; char or block and sibling
+space(s), then indent next lines.</p>
+<p style='margin-left:3.5em;text-indent:-1em;'>- Start each ordered list
+element with a number, a optional sibling &quot;graphic&quot; char or
+block and space(s), then indent next lines.</p>
+<p style='margin-left:3.5em;text-indent:-1em;'>- All indentation
+changes, not recognized as un/ordered lists, will cause a line break. -
+In other words: with the exception of un/ordered lists elements first
+line, all rows of a paragraph will have the same source indentation.</p>
+<p style='margin-left:3.5em;text-indent:-1em;'>- Lines starting with a
+&quot;&gt;&quot; will not be processed and they will be added to text as
+they are.</p>
+<p style='margin-left:3.5em;text-indent:-1em;'>- All text bounded by a
+&quot;~&quot; will be displayed as black in soft and full HTML
+rendering</p>
+<p style='margin-left:3.5em;text-indent:-1em;'>- Text surrounded on 4
+sides by &quot;graphic&quot; elements will be displayed as bordered in
+full HTML rendering.</p>
+
+
+</div>
+<br><a href='http://tvannini.github.io/proff'><img title='PRoff - Personal Roff' border='0' src='http://tvannini.github.io/proff/site/proffed.png' /></a></center></body></html>
