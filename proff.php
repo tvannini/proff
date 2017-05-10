@@ -2,7 +2,7 @@
 $info = <<<EOT
                       PRoff - PersonalRoff 2.0
                         Text formatting tool
-                   <http://proff.sourceforge.net>
+                  <http://tvannini.github.io/proff>
 
     COPYRIGHT:
      Tommaso Vannini, 2007
