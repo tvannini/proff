@@ -2,13 +2,14 @@
  <head>
   <title>PRoff sample</title>
   <style type='text/css'>
-   iframe {display:inline-block;width:48%;height:40%;}
+   .mc {display:inline-block;width:48%;max-width:650px;height:45%;margin:10px;border:1px solid #eaeaea;overflow:scroll;}
  </style>
  </head>
- <body>
-  <iframe src="lorem-raw.txt"></iframe>
-  <iframe src="lorem-proffed.txt"></iframe>
-  <iframe src="soft/lorem.html"></iframe>
-  <iframe src="full/lorem.html"></iframe>
+ <body style="margin:0">
+  <a href="http://tvannini.github.io/proff">Back to site</a><br>
+  <div class="mc"><iframe style="width:1200px;height:1000px;border:none;" src="lorem-raw.txt"></iframe></div>
+  <iframe class="mc" src="lorem-proffed.txt"></iframe>
+  <iframe class="mc" src="soft/lorem.html"></iframe>
+  <iframe class="mc" src="full/lorem.html"></iframe>
  </body>
 </html>
