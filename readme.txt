@@ -64,6 +64,16 @@
     This document, for example, as you see it, is  the  source  and  the
     result at the same time.
 
+    See PRoff at work:
+     <http://tvannini.github.io/proff/site/sample.html>
+
+    Sample will compare a raw text file:
+     <http://tvannini.github.io/proff/site/lorem-raw.txt>
+    with 3 different formatting stages of the same file:
+     . PRoffed: <http://tvannini.github.io/proff/site/lorem-proffed.txt>
+     . Soft: <http://tvannini.github.io/proff/site/soft/lorem.html>
+     . Full: <http://tvannini.github.io/proff/site/full/lorem.html>
+
 
  3. ~ Formatting syntax ~
 
