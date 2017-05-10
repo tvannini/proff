@@ -2,14 +2,24 @@
  <head>
   <title>PRoff sample</title>
   <style type='text/css'>
-   .mc {display:inline-block;width:48%;max-width:650px;height:45%;margin:10px;border:1px solid #eaeaea;overflow:scroll;}
+   .vp {display:inline-block;width:48%;max-width:650px;height:40%;margin:0 10px 0 10px;border:1px solid #eaeaea;overflow:scroll;}
+   .tc {display:inline-block;width:48%;max-width:650px;margin:20px 10px 0 10px;border:none;text-align:center;overflow:hidden;}
+   body {font:0.88em/1.5em sans-serif;color:#555555;}
+   a {color:#993300;text-decoration:none;}
+   a:hover {color:#fefefe;background-color:#993300;text-decoration:none;}
  </style>
  </head>
  <body style="margin:0">
-  <a href="http://tvannini.github.io/proff">Back to site</a><br>
-  <div class="mc"><iframe style="width:1200px;height:1000px;border:none;" src="lorem-raw.txt"></iframe></div>
-  <iframe class="mc" src="lorem-proffed.txt"></iframe>
-  <iframe class="mc" src="soft/lorem.html"></iframe>
-  <iframe class="mc" src="full/lorem.html"></iframe>
+  <br>
+  <a style="margin-left: 30px" href="http://tvannini.github.io/proff">Back to main page</a>
+  <br>
+  <div class="tc">Source raw text: <a href="http://tvannini.github.io/proff/site/lorem-raw.txt">lorem-raw.txt</a></div>
+  <div class="tc">PRoffed text: <a href="http://tvannini.github.io/proff/site/lorem-raw.txt">lorem-proffed.txt</a></div>
+  <div class="vp"><iframe style="width:1200px;height:1000px;border:none;" src="lorem-raw.txt"></iframe></div>
+  <iframe class="vp" src="lorem-proffed.txt"></iframe>
+  <div class="tc">PRoffed text for WEB ("soft" HTML): <a href="http://tvannini.github.io/proff/site/lorem-raw.txt">soft/lorem.html</a></div>
+  <div class="tc">Rendered for WEB ("full" HTML): <a href="http://tvannini.github.io/proff/site/lorem-raw.txt">full/lorem.html</a></div>
+  <iframe class="vp" src="soft/lorem.html"></iframe>
+  <iframe class="vp" src="full/lorem.html"></iframe>
  </body>
 </html>
