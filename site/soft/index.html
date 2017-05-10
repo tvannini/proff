@@ -1,99 +1,63 @@
 <html><head><META http-equiv='Content-Type' content='text/html; charset=UTF-8'></head>
 <body>
 <pre>
-                       .-----------------------.
-                       | PRoff - Personal Roff |
-                       '-----------------------'
+(Text start)
 
+                            ***************
+                            * Lorem ipsum *
+                            ***************
 
-&gt;                                         Document edited by<b> ~PRoff 2.0~
-</b>&gt;                        Text: <a href="http://tvannini.github.io/proff/site/soft">http://tvannini.github.io/proff/site/soft</a>
-&gt;                        HTML: <a href="http://tvannini.github.io/proff/site/full">http://tvannini.github.io/proff/site/full</a>
+ Lorem ipsum dolor  sit  amet,  consectetur  adipisicing  elit,  sed  do
+ eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  - Ut enim ad minim veniam, quis nostrud exercitation  ullamco  laboris
+    nisi ut aliquip ex ea commodo consequat.
+  - Duis aute irure dolor  in  reprehenderit  in  voluptate  velit  esse
+    cillum dolore eu fugiat nulla pariatur.
 
+     1. Sed ut perspiciatis unde omnis iste natus error  sit  voluptatem
+        accusantium doloremque laudantium, totam rem aperiam,
 
- » Current version: 2.0
- » PRoff site: <a href="http://tvannini.github.io/proff">http://tvannini.github.io/proff</a>
- » Download: <a href="http://tvannini.github.io/proff">http://tvannini.github.io/proff</a>
- » Documentation: <a href="http://tvannini.github.io/proff">http://tvannini.github.io/proff</a>
- » Informations: <a href="mailto:tvannini@gmail.com">tvannini@gmail.com</a>
+         a. eaque  ipsa  quae  ab  illo  inventore  veritatis  et  quasi
+            architecto beatae vitae dicta sunt explicabo.
 
+         b. eaque  ipsa  quae  ab  illo  inventore  veritatis  et  quasi
+            architecto beatae vitae dicta sunt explicabo.
 
-  <b> ~ Content ~
+         c. eaque  ipsa  quae  ab  illo  inventore  veritatis  et  quasi
+            architecto beatae vitae dicta sunt explicabo.
+
+     2. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+        aut fugit, sed quia consequuntur magni dolores eos  qui  ratione
+        voluptatem sequi nesciunt.
+
+ Neque: porro quisquam est, qui  dolorem  ipsum  quia  dolor  sit  amet,
+        consectetur, adipisci velit, sed  quia  non  numquam  eius  modi
+        tempora incidunt ut labore  et  dolore  magnam  aliquam  quaerat
+        voluptatem.
+
+             ...........
+             . Ut enim .
+             ...........
+
+  Ad minima veniam,
+ quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+ aliquid ex ea commodi consequatur?
+
+                                   -----
+
+ 1914<b> ~ Translation by H. Rackham ~
 </b>
-   0. ...... Preamble
-   1. ...... Licensing
-   2. ...... How PRoff works
-   3. ...... Formatting syntax
+      From: &lt;<a href="https://en.wikipedia.org/wiki/Lorem_ipsum">https://en.wikipedia.org/wiki/Lorem_ipsum</a>&gt;
 
+      &quot;On the other hand, we denounce with righteous <b> ~indignation~ </b> and
+     <b> ~dislike~ </b>men who are so beguiled and demoralized by the charms of
+      pleasure of the moment, so blinded by  desire,  that  they  cannot
+      foresee the pain and trouble that are bound to  ensue;  and  equal
+      blame belongs to those who fail in their duty through weakness  of
+      will, which is the same as saying through shrinking from toil  and
+      pain.&quot;
 
- 0.<b> ~ Preamble ~
-</b>
-    This project was born from the problem of writing clear, consistent,
-    good-looking, web-able documentation.
-
-    After working for a while with LATEX, *roff, WYSIWYG  editors,  HTML
-    and WIKICode, I came up with a brand new solution: I just wanted  to
-    definitively wipe tags out.
-
-    PRoff, my Personal Roff, is the result  of  my  effort  and  I  hope
-    someone will find it useful.  If  you  have  ideas,  suggestions  or
-    questions please mail to <a href="mailto:tvannini@gmail.com">tvannini@gmail.com</a>.
-
-
- 1.<b> ~ Licensing ~
-</b>
-    PRoff - Copyright (C) 2007, Tommaso Vannini (&lt;<a href="mailto:tvannini@gmail.com">tvannini@gmail.com</a>&gt;)
-
-    PRoff is free software; you can redistribute  it  and/or  modify  it
-    under the terms of the GNU General Public License  as  published  by
-    the Free Software Foundation; either version 3 of  the  License,  or
-    (at your option) any later version. PRoff is distributed in the hope
-    that it will be useful, but WITHOUT ANY WARRANTY; without  even  the
-    implied warranty of MERCHANTABILITY  or  FITNESS  FOR  A  PARTICULAR
-    PURPOSE. See the GNU General Public License for more details.
-
-    You should have received a copy of the GNU  General  Public  License
-    along with this program. If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.
-
-
- 2.<b> ~ How PRoff works ~
-</b>
-    The idea is to identify a set of criteria to beautify a  text,  with
-    no need of tags or other text-extraneous elements.
-
-    One only rule:<b> ~ feeding a processed document as a  source,  process
-    must result in the same document ~.</b>
-
-    This document, for example, as you see it, is  the  source  and  the
-    result at the same time.
-
-
- 3.<b> ~ Formatting syntax ~
-</b>
-    Document text can be written considering a few tricks that will help
-    PRoff to respect and rightly understand your document style.
-
-    Here for &quot;graphic&quot; element is intended  a  character  (or  block  of
-    characters) matching regular expression &quot;\W+&quot;.
-
-     - All in-paragraph multiple spaces will be reduced to one.
-     - Line breaks will not break paragraphs.
-     - All paragraphs larger than line width will be justified.
-     - Blank lines will be respected and they break paragraphs.
-     - Start each unordered list element with a &quot;graphic&quot; char or  block
-       and sibling space(s), then indent next lines.
-     - Start each ordered list element with a number, a optional sibling
-       &quot;graphic&quot; char or block and space(s), then indent next lines.
-     - All indentation changes, not recognized as un/ordered lists, will
-       cause a line break. - In  other  words:  with  the  exception  of
-       un/ordered lists elements first line, all  rows  of  a  paragraph
-       will have the same source indentation.
-     - Lines starting with a &quot;&gt;&quot; will not be processed and they will  be
-       added to text as they are.
-     - All text bounded by a &quot;~&quot; will be displayed as black in soft  and
-       full HTML rendering
-     - Text  surrounded  on  4  sides  by  &quot;graphic&quot;  elements  will  be
-       displayed as bordered in full HTML rendering.
+(Text end)
 
 
 </pre>
