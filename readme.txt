@@ -10,8 +10,8 @@
 
   » Current version: 2.0
   » PRoff site: http://tvannini.github.io/proff
-  » Download: http://tvannini.github.io/proff
-  » Documentation: http://tvannini.github.io/proff
+  » Download: http://github.com/tvannini/proff
+  » Documentation: http://github.com/tvannini/proff/wiki
   » Informations: tvannini@gmail.com
 
 
