@@ -87,7 +87,7 @@ global $pdir;
  */
 global $sdir;
 // _______________________________________________________ PRoff in included by PREdit ___
-if ($GLOBALS['PREdit']) {
+if (isset($GLOBALS['PREdit'])) {
     $pdir = dirname(__FILE__).DIRECTORY_SEPARATOR;
     }
 // _____________________________________________ Use PRoff functions from command line ___
@@ -106,7 +106,7 @@ elseif ($_SERVER['argc'] > 1) {
         // _____ Read options from command line parameters and from configuration file ___
         $options = read_options(read_cmdline(), $source);
         // _______________________________________________ Help requested as parameter ___
-        if ($options['help']) {
+        if (isset($options['help'])) {
             // ____________________________ Output formatted PRoff informations and die___
             die("\n\n".post_proc(pre_proc($info), $dummy_var, array("width" => 60)).
                 "\n\n");
@@ -204,14 +204,15 @@ function read_cmdline($options = null) {
  */
 function read_options($options, $source_file) {
 
-    if (!$options['ini']) {
+    if (!isset($options['ini']) || !$options['ini']) {
         $options['ini'] = $GLOBALS['pdir']."proff.ini";
         }
     $options = array_merge(parse_ini_file($options['ini'], true), $options);
     if ($options['result']) {
         $pathinfo          = pathinfo($source_file);
         $fullname          = $pathinfo['basename'];
-        $ext               = $pathinfo['extension'];
+        $ext               = (isset($pathinfo['extension']) ?
+                              $pathinfo['extension'] : '');
         $name              = ($ext ?
                               substr($fullname, 0, - mb_strlen($ext) - 1) :
                               $fullname);
@@ -287,7 +288,7 @@ function pre_proc($text, $position = false) {
     $graphics   = false;                // ___________ Flag for inside graphic element ___
     while ($line_index < $lines_num) {  // _____________________ For each line in text ___
         $current_line = rtrim($lines[$line_index]);
-        $next_line    = $lines[$line_index + 1];
+        $next_line    = ($line_index < ($lines_num - 1) ? $lines[$line_index + 1] : '');
         // ________________________________________________________________ Blank line ___
         if ($current_line == "|%|") {
             $document[] = array(0, 0, "");
@@ -295,7 +296,7 @@ function pre_proc($text, $position = false) {
             $pre_indent = -1;
             }
         // _______________________________________________________________ "Cite" line ___
-        elseif ($current_line{0} == ">") {
+        elseif (!empty($current_line) && ($current_line[0] == '>')) {
             $document[] = array(0, 0, $current_line, false, true);
             $paragraph  = "";
             $pre_indent = -1;
@@ -547,7 +548,7 @@ function make_paragraph($text,
     $width        = $width - $indent;
     $needle       = "";
     // __________________________________________________________________________ Cite ___
-    if (!$indent && $text{0} == ">") {
+    if (!$indent && !empty($text) && ($text[0] == '>')) {
        $t = $text."\n";
        }
     // _________________________________________________________________ Standard text ___
